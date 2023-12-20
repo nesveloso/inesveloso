@@ -13,16 +13,23 @@ document.addEventListener("DOMContentLoaded", function(){
 
 document.addEventListener("DOMContentLoaded", function(){
   function getCurrentAge(){
-    var birthDate = moment("2000-11-08");
-    var currentDate = moment();
+    var birthDate = new Date("2000-11-08");
+    var currentDate = new Date();
     
-    var age = currentDate.diff(birthDate, 'years');
+    var age = currentDate.getFullYear() - birthDate.getFullYear() ;
+
+    if (currentDate.getMonth() < birthDate.getMonth() || 
+        (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())){
+    age--;
+    }
 
     document.getElementById("displayAge").innerHTML = age;
   }
 
-    getCurrentAge();
+  getCurrentAge();
+  
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function(){

@@ -20,9 +20,9 @@
             <button class="hamburger"></button>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html" class="active">Sobre</a></li>
-                <li><a href="projectos.html">Projectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="sobre.html" class="active">About</a></li>
+                <li><a href="projectos.html">Projects</a></li>
+                <li><a href="contacto.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -32,12 +32,12 @@
             <div class="about-text">
                 <div class="left-column">
                     <div class="about-me">
-                        <h3>Sobre mim</h3>
+                        <h3>About me</h3>
                         <p>
-                            Aos 23 anos, desafio-me no mundo da tecnologia como desenvolvedora fullstack em regime freelance, onde a minha 
-                            criatividade ganha vida. A minha rotina abrange tanto o front-end quanto o back-end, mas confesso que a minha 
-                            preferência recai mais sobre o <strong>front-end</strong>, especialmente quando se trata de explorar frameworks UI. 
-                            Gosto de transformar ideias abstratas em interfaces visualmente atrativas para o usuário!
+                            At the age of <span id="displayAge"></span>, I challenge myself in the world of technology as a freelance full-stack developer, where my 
+                            creativity comes to life. My routine spans both front-end and back-end, but I must confess that my 
+                            preference leans more towards the <strong>front-end</strong>, especially when it comes to exploring
+                            UI frameworks. I enjoy turning abstract ideas into visually appealing interfaces for the user.
                         </p>
                     </div>
                 </div>
@@ -45,12 +45,12 @@
                 <div class="right-column">
                     <img class="profile-round" src="imagens/perfil/setup.png" alt="Setup">
                     <div class="progress">
-                        <h3>Percurso</h3>
+                        <h3>My progress</h3>
                         <p>
-                            Desde pequena que me aprofundei nas artes digitais e programação, e fui aprendendo sozinha como programar em 
-                            Javascript e C# para criar jogos, nomeadamente no Unity. Aos 16 anos tirei o curso profissional de desenho digital 
-                            3D, trabalhei com design gráfico e em 2023 decidi continuar com o meu maior gosto pela programação, onde me formei 
-                            na escola de Engenharia CodeMaster.
+                            Since childhood, I immersed myself in digital arts and programming, teaching myself how to program in
+                            Javascript and C# to create video games, particularly in Unity Engine. At the age of 16, I pursued a 
+                            professional course in 3D digital drawing, worked in graphic design, and in 2023, I decided to continue 
+                            my passion for programming. I graduated from the CodeMaster Engineering School.
                         </p>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
 
         <div class="container-skills">
             <div class="skills">
-                <h3>Trabalho com...</h3>
+                <h3>I work with...</h3>
                 <div class="skills-webdev">
                     <svg width="98px" height="98px" id="s_htm" class="skill-up" viewBox="0 0 90 90"><image x="13" width="64" height="90" xlink:href="data:img/png;base64,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"/></svg>
                     <svg width="100px" height="100px" id="s_cs" class="skill-up" viewBox="-52.5 0 361 361" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"><g><path d="M127.843868,360.087912 L23.6617143,331.166242 L0.445186813,70.7657143 L255.554813,70.7657143 L232.31367,331.125451 L127.843868,360.087912 L127.843868,360.087912 Z" fill="#264DE4"></path><path d="M212.416703,314.546637 L232.277802,92.0573187 L128,92.0573187 L128,337.950242 L212.416703,314.546637 L212.416703,314.546637 Z" fill="#2965F1"></path><path d="M53.6685714,188.636132 L56.530989,220.572835 L128,220.572835 L128,188.636132 L53.6685714,188.636132 L53.6685714,188.636132 Z" fill="#EBEBEB"></path><path d="M47.917011,123.994725 L50.8202198,155.932132 L128,155.932132 L128,123.994725 L47.917011,123.994725 L47.917011,123.994725 Z" fill="#EBEBEB"></path><path d="M128,271.580132 L127.860044,271.617407 L92.2915165,262.013187 L90.0177582,236.54189 L57.957978,236.54189 L62.4323516,286.687648 L127.853011,304.848879 L128,304.808088 L128,271.580132 L128,271.580132 Z" fill="#EBEBEB"></path><path d="M60.4835165,0 L99.1648352,0 L99.1648352,16.1758242 L76.6593407,16.1758242 L76.6593407,32.3516484 L99.1648352,32.3516484 L99.1648352,48.5274725 L60.4835165,48.5274725 L60.4835165,0 L60.4835165,0 Z" fill="#000000"></path><path d="M106.901099,0 L145.582418,0 L145.582418,14.0659341 L123.076923,14.0659341 L123.076923,16.8791209 L145.582418,16.8791209 L145.582418,49.2307692 L106.901099,49.2307692 L106.901099,34.4615385 L129.406593,34.4615385 L129.406593,31.6483516 L106.901099,31.6483516 L106.901099,0 L106.901099,0 Z" fill="#000000"></path><path d="M153.318681,0 L192,0 L192,14.0659341 L169.494505,14.0659341 L169.494505,16.8791209 L192,16.8791209 L192,49.2307692 L153.318681,49.2307692 L153.318681,34.4615385 L175.824176,34.4615385 L175.824176,31.6483516 L153.318681,31.6483516 L153.318681,0 L153.318681,0 Z" fill="#000000"></path><path d="M202.126769,188.636132 L207.892396,123.994725 L127.889582,123.994725 L127.889582,155.932132 L172.892132,155.932132 L169.98611,188.636132 L127.889582,188.636132 L127.889582,220.572835 L167.216527,220.572835 L163.509451,261.992791 L127.889582,271.606857 L127.889582,304.833407 L193.362286,286.687648 L193.842637,281.291956 L201.347516,197.212132 L202.126769,188.636132 L202.126769,188.636132 Z" fill="#FFFFFF"></path></g></svg>
@@ -87,8 +87,8 @@
                 <br><br>
 
                 <div class="more-skills">
-                    <h3>Mas não fico por aqui!</h3>
-                    <p>Outras linguagens que estou a aprender? Espanhol! Mas é uma linguagem de outro nível.</p>
+                    <h3>But I'm not done yet!</h3>
+                    <p>Other languages I'm learning? Spanish! But that's on a whole other level.</p>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
     </main>
     
     <footer>
-        <p>&copy; <span id="displayDate"></span> Inês Veloso. Todos os direitos reservados.</p>
+        <p>&copy; <span id="displayDate"></span> Inês Veloso. All rights reserved.</p>
     </footer>
 
     <script src="js/custom.js"></script>
