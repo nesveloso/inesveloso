@@ -453,7 +453,18 @@ footer{
 }
 
 
+
 /* MEDIA QUERIES */
+
+@media only screen and (max-width: 1920px){
+
+    /* About */
+    .about-text p, .more-skills p{
+        font-size: 21px;
+    }
+
+}
+
 @media only screen and (max-width: 1680px){
 
     body{
@@ -509,6 +520,10 @@ footer{
 }
 
 @media only screen and (max-width: 1440px){
+
+    .about-text p, .more-skills p{
+        font-size: 18px;
+    }
 
     /* Projects */
     .container-project{
