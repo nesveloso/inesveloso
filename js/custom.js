@@ -29,19 +29,3 @@ document.addEventListener("DOMContentLoaded", function(){
   getCurrentAge();
   
 });
-
-
-
-document.addEventListener("DOMContentLoaded", function(){
-  var cards = document.querySelectorAll('.card_home');
-
-  cards.forEach(function(card){
-
-    card.addEventListener('click', function(){
-      var cardId = this.id;
-
-      window.location.href = 'projectos.html#' + cardId;
-    });
-  });
-  
-});
