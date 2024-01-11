@@ -765,7 +765,7 @@ footer{
         transition: 0.5s 0.8s;
     }
 
-    .nav-list{
+    .navbar.active .nav-list{
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
         z-index: 100;
@@ -1002,3 +1002,4 @@ footer{
     }
 
 }
+
