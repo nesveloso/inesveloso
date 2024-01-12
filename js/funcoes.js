@@ -6,7 +6,7 @@ const navbar = document.querySelector(".navbar");
 hamburger.addEventListener("click", () => navbar.classList.toggle("active"));
 
 
-//SCROLL WEBSITE
+//SCROLL Animation
 const myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting === true){
