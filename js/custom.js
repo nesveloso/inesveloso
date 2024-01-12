@@ -1,3 +1,5 @@
+//Footer Year
+
 document.addEventListener("DOMContentLoaded", function(){
   function getCurrentYear(){
     var d = new Date();
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-
+//Age update
 document.addEventListener("DOMContentLoaded", function(){
   function getCurrentAge(){
     var birthDate = new Date("2000-11-08");
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     if (currentDate.getMonth() < birthDate.getMonth() || 
         (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())){
-    age--;
+      age--;
     }
 
     document.getElementById("displayAge").innerHTML = age;
