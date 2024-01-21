@@ -1,9 +1,9 @@
 //Navbar - MOBILE
 
 const hamburger = document.querySelector(".hamburger");
-const navbar = document.querySelector(".navbar");
+const nav = document.querySelector(".nav");
 
-hamburger.addEventListener("click", () => navbar.classList.toggle("active"));
+hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
 
 //SCROLL Animation

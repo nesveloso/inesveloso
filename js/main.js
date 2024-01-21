@@ -10,7 +10,7 @@ function ConteudoPorIdioma(){
         console.log('A carregar conteúdo em Português...');
     }
     else{
-        console.log('A carregar conteúdo em Inglês...');
+        console.log('Loading content in English...');
     }
 
 }
@@ -29,6 +29,6 @@ function SendMail(event){
     };
 
     emailjs.send("service_u1ap0ne", "template_epusk69", params).then(function (res){
-        alert("Mensagem enviada com sucesso!");
+        alert("Message sent successfully!");
     });
 }

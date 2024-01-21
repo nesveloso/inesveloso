@@ -5,8 +5,14 @@
   src: url("fonts/MuseoModerno.ttf");
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html{
     scroll-behavior: smooth;
+    cursor: url('/cursor/cursor_normal.png'), auto;
 }
 
 body{
@@ -18,9 +24,63 @@ body{
     background: linear-gradient(90deg, rgb(57, 21, 153) 0%, rgb(68, 61, 148) 35%, rgb(96, 61, 177) 100%);
 }
 
-section{
-    margin-bottom: 90px; 
+.header{
+    padding-inline: 16px;
 }
+
+.nav{
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-list{
+    display: flex;
+    gap: 65px;
+    list-style: none;
+    z-index: 100;
+}
+
+.nav-list a{
+    font-size: 24px;
+    color: white;
+    padding-block: 16px;
+}
+
+.nav-list a:hover{
+    transition: 0.3s;
+    color: rgba(238, 217, 96, 0.8);
+}
+
+.hamburger{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-top: 3px solid white;
+    z-index: 500;
+}
+
+.hamburger::before, .hamburger::after{
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: white;
+    margin-top: 6px;
+    position: relative;
+    transition: 0.5s;
+}
+
+section{
+    margin-bottom: 20px; 
+}
+
 
 .hidden{
     opacity: 0;
@@ -52,97 +112,14 @@ section{
 a{
     color: inherit;
     text-decoration: none;
+    cursor: url('/cursor/cursor_pointer.png'), pointer;
+    text-decoration: none;
 }
 
 /* NAVBAR */
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-    height: 10vh;
-}
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-    margin-top: 10px;
-}
 
 .close-icon{
     display: none;
-}
-
-#navbar-icon{
-    display: none;
-}
-
-.navbar{
-    font-size: 22px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s, color 0.3s;
-}
-
-.nav-list{
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    list-style: none;
-    gap: 45px;
-}
-
-.nav-list a{
-    color: #fff;
-    padding-block: 16px;
-    text-decoration: none;
-}
-
-
-.navbar li a{
-    position: relative;
-    color: white;
-    text-decoration: none;
-}
-
-.navbar li a:hover{
-    color: rgba(238, 217, 96, 0.8);
-}
-
-.navbar li a::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in;
-}
-
-.navbar li:hover a::before{
-    background-color: white;
-}
-
-.hamburger{
-    display: none;
-    border: none;
-    background: none;
-    border-top: 3px solid #fff;
-    cursor: pointer;
-}
-
-.hamburger::before, .hamburger::after{
-    content: " ";
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin-top: 5px;
 }
 
 /* HOME */
@@ -154,6 +131,10 @@ main{
     position: relative;
     margin-top: 6vh;
     text-align: left;
+}
+
+.about_text{
+  line-height: 2; 
 }
 
 .text h1{
@@ -203,7 +184,7 @@ main{
 }
 
 .redes-sociais2 a:hover, .redes-sociais3 a:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) translateZ(0);
 }
 
 .container-text{
@@ -220,6 +201,8 @@ main{
 
 .titles h1{
     font-size: 45px;
+    padding-bottom: 35px;
+    padding-top: 45px;
 }
 
 .titles h2{
@@ -230,6 +213,8 @@ main{
     color: white;
     padding: 10px;
     display: inline-block;
+    margin-top: 45px;
+    margin-bottom: 85px;
 }
 
 .cards-projects{
@@ -241,17 +226,8 @@ main{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 90px;
-}
-
-.ui-project{
-    width: 900px;
-}
-
-.project-buttons{
-    margin-top: -85px;
+    margin-top: 80px;
+    margin-bottom: 28vh;
 }
 
 .project-buttons a{
@@ -259,11 +235,21 @@ main{
 }
 
 .card-project{
-    width: 350px;
-    margin-right: 60px;
+    width: auto;
 }
 
-.card_main, .card, .card_home{
+.card_main{ 	
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.card_main:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card, .card_home{
     margin: 10px;
     padding: 15px;
     border: 1px solid #ccc;
@@ -333,7 +319,7 @@ main{
 }
 
 /* ABOUT */
-.about-text{
+.about-text, .ui-project{
     display: flex;
     justify-content: space-between;
 }
@@ -344,11 +330,20 @@ main{
 
 .about-text p{
     font-size: 18px;
+    padding-bottom: 45px;
 }
 
 .about-me{
     margin-left: 35px;
     text-align: left;
+}
+
+.right-column{
+    margin-left: 35px;
+}
+
+.left-column{
+    margin-right: 35px;
 }
 
 .left-column, .right-column{
@@ -379,20 +374,77 @@ main{
 .skills h3{
     font-size: 35px;
     color: rgba(238, 217, 96, 0.8);
+    padding-top: 55px;
+    padding-bottom: 25px;
 }
 
-.skills-icons{
-    display: flex;
-    justify-content: center;
-}
-           
 .skill-up{
-    transition: .5s, color .10s;
+    transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
 
 .skill-up:hover{
-    transform: translatey(-20px);
+    transform: translateY(-20px);
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: auto;
+}
+
+.card-skill{
+    width: 15em;
+    height: 18em;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-skill img{
+    max-width: 15em;
+    max-height: 18em;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-skill:hover img{
+    filter: blur(60px);
+}
+
+.card-skill .overlay{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.card-skill:hover{
+    background-color: rgba(38, 53, 67, 0.39);
+    cursor: pointer;
+    transform: translateY(-20px);
+}
+
+.card-skill:hover .overlay{
+    opacity: 1;
+}
+
+.card-skill .overlay p{
+    display: none;
+}
+
+.card-skill:hover .overlay p{
+    display: block;
+    text-align: center;
 }
 
 #black-box{
@@ -497,14 +549,13 @@ main{
 
 
 /* FOOTER */
-
 footer{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     bottom: 0;
     width: 100%;
     text-align: center;
+    padding-top: 5px;
 }
-
 
 
 /* MEDIA QUERIES */
@@ -530,21 +581,10 @@ footer{
     }
 
     /* Projectos */
-    .ui-project{
-        width: 800px;
-    }
-
-    .screenshot{
-        width: 750px;
-    }
 
     .card-project{
         width: auto;
         margin: 0;
-    }
-
-    .card{
-        width: 230px;
     }
 
 }
@@ -552,23 +592,11 @@ footer{
 @media only screen and (max-width: 1510px){
 
     /* Projectos */
-    .ui-project{
-        width: 750px;
-    }
-
-    .screenshot{
-        width: 700px;
-    }
 
     .card-project{
         width: auto;
         margin: 0;
     }
-
-    .card{
-        width: 230px;
-    }
-
 
 }
 
@@ -579,20 +607,36 @@ footer{
     }
 
     /* Projects */
-    .container-project{
-        display: flex;
-        align-items: center; 
-    }
-
     .ui-project{
-        width: 100%;
-    }
-  
-    .card{
-        width: 550px;
-        margin-bottom: 20px;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
+    .left-column{
+        text-align: center;
+        padding: 90px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .project-buttons{
+        margin-top: 20px;
+        order: 2;
+    }
+
+    .card_main img.screenshot{
+        width: 100%;
+        margin: 0;
+        order: 1;
+    }
+
+    .titles h2{
+        margin-bottom: 0;
+    }
+
+    .right-column{
+        margin-left: 0;
+    }
 
 }
 
@@ -628,8 +672,19 @@ footer{
         font-size: 18px;
     }
 
-}
+    .screenshot{
+        width: 70%;
+    }
 
+    .card_main:hover{
+        transform: none;
+    }
+
+    .left-column{
+        padding: 20px;
+    }
+
+}
 
 @media only screen and (max-width: 920px){
 
@@ -651,15 +706,9 @@ footer{
         font-size: 45px;
     }
 
-    .left-column, .right-column{
-        width: 100%;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
     .about-me, .progress, .more-skills h3{
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
         text-align: center;
     }
 
@@ -673,10 +722,9 @@ footer{
     }
 
     /* Projects */
-    .ui-project, .screenshot, .card{
-        width: 100%;
-        height: auto;
-        margin-right: 0;
+    .right-column{
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
 }
@@ -705,17 +753,17 @@ footer{
         font-size: 16px;
     }
 
-    .cards-projects {
+    .cards-projects{
         flex-direction: column;
         align-items: center;
     }
 
-    .card_home {
+    .card_home{
         width: 80%;
         margin-bottom: 20px;
     }
 
-    .card_home .card2 {
+    .card_home{
         width: 100%;
     }
 
@@ -724,26 +772,31 @@ footer{
     }
 
     /* Projects */
-
     .card{
         height: auto;
         margin-right: 0;
     }
 
-    .card-project{
-        width: 80%;
-        margin: 0;
+    .cards-projects{
+        margin-left: 25px;
+        margin-right: 25px;
     }
-
 
 }
 
 @media only screen and (max-width: 625px){
 
     /* Home */
-    nav{
-        flex-direction: column;
-        align-items: center;
+    .header{
+        z-index: 100;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav{
+        z-index: 1000;
     }
 
     .nav-list{
@@ -752,19 +805,23 @@ footer{
         left: 0;
         width: 100vw;
         height: 100vh;
+        background: #a5c;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-in-out;
+        pointer-events: none;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         gap: 0;
-
-        clip-path: circle(100px at 90% -15%);
-        transition: 1s ease-out;
-        background-color: #a5c;
-        pointer-events: none;
     }
 
     .nav-list a{
+        font-size: 24px;
         opacity: 0;
+    }
+
+    .nav-list a:hover{
+        color: rgba(238, 217, 96, 0.8);
     }
 
     .nav-list li:nth-child(1) a{
@@ -783,42 +840,30 @@ footer{
         transition: 0.5s 0.8s;
     }
 
-    .navbar.active .nav-list{
+    .nav.active .nav-list{
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
-        z-index: 100;
     }
 
-    .navbar-active, .nav-list a{
-        opacity: 300;
-    }
-
-    .hamburger{
-        display: block;
-        margin-top: 55px;
-        z-index: 200;
-    }
-
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #navbar a{
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    #navbar.active a{
-        display: block;
-    }
-
-    #navbar-icon{
-        display: block;
+    .nav.active .nav-list a{
+        opacity: 1;
         cursor: pointer;
+    }
+
+    .nav.active .hamburger{
+        position: fixed;
+        top: 25px;
+        right: 15px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburger::before{
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
     }
 
     .close-icon{
@@ -837,7 +882,6 @@ footer{
     }
 
 }
-
 
 @media only screen and (max-width: 495px){
 
@@ -895,10 +939,6 @@ footer{
         margin: 0;
     }
 
-     .card_main{
-        display: none;
-    }
-
     .project-buttons{
         margin-top: 80px;
     }
@@ -929,37 +969,9 @@ footer{
     }
 
     /* Projects */
-    .container-project{
-        display: flex;
-        justify-content: center;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-
-    .ui-project{
-        width: 100%;
-    }
-
-    .card-project{
-        width: 100%; 
-        margin-right: 0;
-    }
-
-    .card{
-        width: 100%;
-    }
-
-    .card_main{
-        width: 100%;
-    }
-
-    .project-buttons{
-        margin-top: -85px;
-        text-align: center;
-    }
-
     .project-buttons a{
         display: block;
+        padding-right: 0;
         margin-bottom: 10px;
     }
     
@@ -977,11 +989,6 @@ footer{
     }
 
     /* About */
-    .left-column, .right-column{
-        width: 100%;
-        margin: 0;
-    }
-
     .about-me, .progress, .more-skills{
         margin: 0 20px; 
     }
@@ -1009,10 +1016,6 @@ footer{
 
     .card-project p{
         font-size: 15px;
-    }
-
-    .card{
-        margin: 0;
     }
 
     .card p{
