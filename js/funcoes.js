@@ -5,7 +5,6 @@ const nav = document.querySelector(".nav");
 
 hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
-
 //SCROLL Animation
 const myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

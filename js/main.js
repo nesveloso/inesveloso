@@ -17,7 +17,6 @@ function ConteudoPorIdioma(){
 
 ConteudoPorIdioma();
 
-
 // Enviar email
 function SendMail(event){
     event.preventDefault();
